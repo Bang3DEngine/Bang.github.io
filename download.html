@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bang 3D Engine</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="Resources/highlight/styles/darcula.css">
-  <link rel="stylesheet" href="style.css">
-  
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Bang 3D Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Resources/highlight/styles/darcula.css">
+    <link rel="stylesheet" href="style.css">
 
-  <script src="Resources/highlight/highlight.pack.js"></script>
-  <script> hljs.initHighlightingOnLoad(); </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script type="text/javascript"> 
-	$(function() { $("#footer").load("footer.html");  });
-  </script>
-  <script type="text/javascript" src="menuBarScript.js"></script>
+    <script src="Resources/highlight/highlight.pack.js"></script>
+    <script> hljs.initHighlightingOnLoad(); </script>
+
+    <script type="text/javascript">
+        $(function() { $("#footer").load("footer.html");  });
+    </script>
+    <script type="text/javascript" src="menuBarScript.js"></script>
 </head>
 
 <body id="body">
@@ -25,24 +25,49 @@
 <div id="menuBar"> </div>
 
 <div class="container-fluid text-center">   
-  <div class="row content">
-    <div class="text-left" style="margin: 0 20px 0 20px; text-align:left; "> 
-      <h1> Download and Install instructions for Ubuntu </h1>
-      In order to download and install Bang do the following (copy and paste in the terminal):
-      <pre class="pre">
-	<code class="bash hljs code">###########
-# Install dependencies:
-sudo apt-get -y install libglew-dev qt5-default libfreetype6-dev libopenal-dev libalut-dev libassimp-dev qtcreator
+    <div class="row content">
+        <div class="text-left" style="margin: 0 20px 0 20px; text-align:left; ">
+            <center> <h1> <b> Install instructions </b> </h1> </center>
 
-# Download and Install
-git clone https://github.com/Bang3DEngine/Bang  # Clone Bang git repo
+            <hr/>
+            <p> These install instructions are divided in <b>3 steps</b>: </p>
+            <ol>
+            <li><a href="#">Install dependencies</a></li>
+            <li><a href="#">Install Bang</a></li>
+            <li><a href="#">Execute</a></li>
+            </ol>
+            <hr/>
+
+            <h2> <b> 1. Install dependencies </b> </h2>
+            <p> In order to compile Bang you will need: </p>
+            <p> <b>GLEW</b>, <b>Assimp</b>, <b>Qt5</b> development libraries,
+                <b>Freetype</b> development libraries,
+                <b>OpenAL</b> and <b>ALUT</b> development libraries. </p>
+
+            <h3> Ubuntu </h3>
+            <p> In order to download and install Bang dependencies in Ubuntu do the following: </p>
+            <pre class="pre"><code class="bash hljs code">sudo apt-get -y install libglew-dev qt5-default libfreetype6-dev libopenal-dev libalut-dev libassimp-dev qtcreator</code></pre>
+
+            <h3> Other Linux distributions </h3>
+            <p> You will have to install them yourself ! </p>
+
+            <hr/>
+            <h2> <b> 2. Install Bang </b> </h2>
+            <p> In order to download and install Bang do the following: </p>
+            <pre class="pre"><code class="bash hljs code">git clone https://github.com/Bang3DEngine/Bang  # Clone Bang git repo
 cd Bang
-./scripts/fullCompile.sh EDITOR RELEASE_MODE # Compile the editor
-./scripts/fullCompile.sh GAME   RELEASE_MODE # Compile the game base
-###########</code></pre>
-      <hr>
+./scripts/fullCompile.sh EDITOR RELEASE_MODE    # Compile the editor
+./scripts/fullCompile.sh GAME   RELEASE_MODE    # Compile the game base </code></pre>
+
+            <hr/>
+            <h2> <b> 3. Execution </b> </h2>
+            <p>Once installed, you can start Bang using:</p>
+            <pre class="pre"><code class="bash hljs code">./bin/Bang</code></pre>
+
+            <hr/>
+
+        </div>
     </div>
-  </div>
 </div>
 
 <div id="footer"> </div>
