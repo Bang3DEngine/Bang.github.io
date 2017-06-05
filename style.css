@@ -9,6 +9,13 @@
     height: 50px;
 }
 
+#trBangHeader
+{
+  background: linear-gradient(to left,
+                              #FEA, #FEA,
+                              white, white);
+}
+
 .code
 {
     border-radius: 5px;
