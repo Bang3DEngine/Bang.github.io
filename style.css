@@ -1,19 +1,13 @@
-.navbar,
-.navbar-inverse,
-.navbar-brand, .navbar-nav li a
+
+.navbar .navbar-brand 
 {
-    padding-top: 0;
-    margin-bottom: 0;
-    border-radius: 0;
-    line-height: 50px;
-    height: 50px;
+  padding-top: 10px;
 }
 
-#trBangHeader
+.navbar .navbar-brand img 
 {
-  background: linear-gradient(to left,
-                              #FEA, #FEA,
-                              white, white);
+  height: 40px;
+  width: 40px;
 }
 
 .code
@@ -23,24 +17,26 @@
     width: 75%;
 }
 
-.container-fluid
-{
-    min-height: 100%;
-}
-
-pre
-{
-    padding: 0px;
-    border: 0px;
-    background-color: rgba(0,0,0,0);
-}
-
 .footer
 {
     background-color: #555;
     color: white;
-    padding: 15px;
-    width: 100%;
-    height: 50px;
-    margin-top: 70px;
+    padding: 25px;
 }
+    
+.carousel-inner img 
+{
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  min-height:200px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) 
+{
+  .carousel-caption 
+  {
+    display: none; 
+  }
+}
+
