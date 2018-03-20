@@ -15,9 +15,8 @@ for htmpFile in glob.glob("*." + HtmpExtension):
 
     htmlFileLines = htmpFileLines
     for i, line in enumerate(htmlFileLines, start=0):
-
         incDirectiveIdx = line.find(IncludeDirective)
-        if (incDirectiveIdx > 0):
+        if (incDirectiveIdx >= 0):
             incFile = line.strip(" \n").split(" ")[1]
             incFileContents = open(incFile).read()
 

@@ -8,8 +8,3 @@ function markCurrentPage()
 	else if (pageName == "contact.html") { $('#contact-button').addClass('active'); }
 	else { $('#home-button').addClass('active'); }
 }
-
-$(document).ready(function() 
-{ 
-	$("#menu-bar").load("menu-bar.html", markCurrentPage);
-});

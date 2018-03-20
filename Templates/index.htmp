@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+#include doctype-html-begin.html
 <head>
     #include head-contents.html
 </head>
-<body>
 
-<div id="menu-bar"></div>
+<body>
+#include menu-bar.html
 
 <div id="carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -57,7 +56,7 @@
   </div>
 </div><br>
 
-<div id="footer"></div>
+#include footer.html
 
 </body>
 </html>
