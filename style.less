@@ -1,0 +1,163 @@
+@import (less) 'bootstrap.less';
+
+@COLOR_PRIMARY:          #ff6600;
+@COLOR_PRIMARY_DARK:     #cc0000;
+@COLOR_BG_BOXES:         @COLOR_PRIMARY_DARK;
+@COLOR_FG_BUTTONS:       #ffffff;
+@COLOR_BG_BUTTONS:       #ff6600;
+@COLOR_BG_BUTTONS_OVER:  #ff8800;
+@FAVICON_SIZE: 32px;
+@FOOTER_COLOR: #555;
+@NAVBAR_SIZE: 40px;
+
+.navbar .navbar-brand 
+{
+  padding-top: 10px;
+}
+
+.navbar .navbar-brand img 
+{
+  height: @NAVBAR_SIZE;
+  width:  @NAVBAR_SIZE;
+}
+
+.code
+{
+    border-radius: 5px;
+    padding-left: 15px;
+    width: 75%;
+}
+
+.footer
+{
+    background-color: @FOOTER_COLOR;
+    color: white;
+    padding: 25px;
+}
+    
+.carousel-inner img 
+{
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  min-height:200px;
+}
+
+
+.bangRow
+{
+  overflow: auto;
+}
+
+.clearBoth
+{
+  clear: both;
+}
+
+.bangColumn
+{
+  float: left;
+  display:inline-block;
+  float:none;
+  text-align:left;}
+
+
+.bangCenteredRow
+{
+  .bangRow;
+  text-align:center;
+}
+
+.bangButton
+{
+  color: @COLOR_FG_BUTTONS;
+  background-color: @COLOR_BG_BUTTONS;
+  border-radius: 8px;
+  border-width:0px;
+  
+  &:hover {
+    background-color: @COLOR_BG_BUTTONS_OVER;
+  }
+}
+.bangButton::hover
+{
+  .bangButton;
+}
+.bangButtonNormal
+{
+  .bangButton;
+  padding: 15px;
+  font-size: 20px;
+}
+.bangButtonLarge
+{
+  .bangButton;
+  padding: 15px;
+  font-size: 40px;
+}
+
+.menuBarTop
+{
+  z-index: 10;
+  box-shadow: 0px 0px 10px 10px ! important;
+  margin: 0px ! important;
+}
+.menuBarBase
+{
+  background-color: @COLOR_PRIMARY_DARK;
+  border-width: 0px ! important;
+}
+.menuBarA
+{
+  color: #ffffff ! important;
+}
+
+.framedContainer 
+{
+  padding: 10px;
+  border-radius: 10px;
+  border-color: #000000;
+  border-width: 1px;
+  overflow: auto;
+}
+
+#downloadColumn
+{
+  .bangColumn;
+  .framedContainer;
+  width: 50%;
+  padding: 20px;
+  color: #333;
+  text-align:center;
+  vertical-align: top;
+}
+
+.favicon
+{
+  width:  @FAVICON_SIZE;
+  height: @FAVICON_SIZE;
+}
+
+@media screen and (max-width: 600px) 
+{
+    .bangColumn 
+    {
+        width: 100%;
+        float:none;
+    }
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) 
+{
+  .carousel-caption 
+  {
+    display: none; 
+  }
+}
+
+.bangFooter
+{
+  text-align:center;
+  margin-top: 40px;
+}
+

@@ -1,13 +1,11 @@
-#include doctype-html-begin.html
+<?php require_once("doctype-html-begin.php") ?>
+
 <head>
-    #include head-contents.html
-    <script src="Resources/highlight/highlight.pack.js"></script>
-    <link rel="stylesheet" href="Resources/highlight/styles/darcula.css">
-    <script> hljs.initHighlightingOnLoad(); </script>
+    <?php require_once("head-contents.php") ?>
 </head>
 
 <body>
-#include menu-bar.html
+<?php require_once("menu-bar.php") ?>
 
 <div class="container-fluid text-center">   
     <div class="row content">
@@ -56,8 +54,8 @@ git checkout TFG
     </div>
 </div>
 
-#include footer.html
-</body>
+<?php require_once("footer.php") ?>
 
+</body>
 </html>
 

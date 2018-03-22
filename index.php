@@ -1,10 +1,11 @@
-#include doctype-html-begin.html
+<?php require_once("doctype-html-begin.php") ?>
+
 <head>
-    #include head-contents.html
+    <?php require_once("head-contents.php") ?>
 </head>
 
 <body>
-#include menu-bar.html
+<?php require_once("menu-bar.php") ?>
 
 <div id="carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -15,7 +16,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="Resources/bang-screenshot-1.png" alt="Image">
+        <img src="Resources/snake-snapshot-3.png" alt="Image">
         <div class="carousel-caption">
           <h3>Start using Bang now!</h3>
           <p>It's free!</p>
@@ -23,7 +24,7 @@
       </div>
 
       <div class="item">
-        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+        <img src="Resources/bang-screenshot-1.png" alt="Image">
         <div class="carousel-caption">
           <h3>Develop awesome games with it!</h3>
           <p>:)</p>
@@ -44,19 +45,20 @@
   
 <div class="container text-center">    
   <h3>Games done using Bang</h3><br>
-  <div class="row">
-    <div class="col-sm-5">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Snake3D</p>
+  <div class="bangCenteredRow">
+    <div class="bangColumn">
+      <img src="Resources/snake-snapshot.png" class="img-responsive" style="object-fit: cover; width:300px; height:200px" alt="Image">
+      <p style="text-align:center">Snake3D</p>
     </div>
-    <div class="col-sm-5"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>KeyVirus</p>    
+    <span style="display:inline-block; width:50px;"></span>
+    <div class="bangColumn"> 
+      <img src="Resources/keyvirus-snapshot.png" class="img-responsive" style="object-fit: cover; width:300px; height:200px" alt="Image">
+      <p style="text-align:center">KeyVirus</p>    
     </div>
   </div>
 </div><br>
 
-#include footer.html
+<?php require_once("footer.php") ?>
 
 </body>
 </html>

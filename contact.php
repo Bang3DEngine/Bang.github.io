@@ -1,10 +1,11 @@
-#include doctype-html-begin.html
+<?php require_once("doctype-html-begin.php") ?>
+
 <head>
-    #include head-contents.html
+    <?php require_once("head-contents.php") ?>
 </head>
 
 <body>
-#include menu-bar.html
+<?php require_once("menu-bar.php") ?>
 
 <div class="container-fluid text-center">   
     <div class="row content">
@@ -16,8 +17,8 @@
     </div>
 </div>
 
-#include footer.html
-</body>
+<?php require_once("footer.php") ?>
 
+</body>
 </html>
 
