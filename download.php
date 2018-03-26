@@ -25,36 +25,59 @@
       <img alt="Bang" src="https://cdn.rawgit.com/Bang3DEngine/Bang/061e2210/EngineAssets/Logos/LogoBang.svg"
            style="height:150px;">
     </div>
+    
+    <hr/>
 
     <div>
-      <h2 align="center"> Download <b> Bang Editor v0.0 </b> for: </h2>
+      <h2 align="left"> Download <b> Bang Editor v0.0 </b> for: </h2>
     </div>
     
-    <div style="clear:both">
-      <div class="bangCenteredRow" style="text-align:center; margin-top:20px;">
-        <?php
+    <div style="text-align:center; margin-top:20px;">
+      <?php
+        $osBaseName_to_osName = array();
+        $ossNames= DownloadFunctions::GetBuildOSs();
+        foreach ($ossNames as $osName) 
+        {
+          $osBaseName = explode("-", $osName, 2)[0];
+          if (!array_key_exists($osBaseName, $osBaseName_to_osName))
+          {
+            $osBaseName_to_osName[$osBaseName] = array();
+          }
+          array_push($osBaseName_to_osName[$osBaseName], $osName);
+        }
+
+        foreach($osBaseName_to_osName as $osBaseName => $osNameArray)
+        {
+          echo "<table width=\"100%\" style=\"border-collapse:separate; border-spacing:0em 10px;\">";
+          echo "  <tr>";
+          echo "    <td width=\"25%\" style=\"text-align:right; padding-right:10px;\">";
+          echo "      <h2 style=\"display:inline-block;\"> $osBaseName: </h2>";
+          echo "    </td>";
+          echo "    <td>";
+
           $first = true;
-          $ossNames= DownloadFunctions::GetBuildOSs();
-          foreach ($ossNames as $osName) 
+          foreach($osNameArray as $osName)
           {
             $downloadLink = DownloadFunctions::GetDownloadLink($osName);
             if (is_file($downloadLink))
             {
-              echo "<div class=\"bangColumn\" style=\"" . ($first ? "" : "margin-left:10px") . "\">";
-              echo "  <a href=\"" . $downloadLink . "\">";
-              echo "    <button type=\"button\" class=\"bangButtonNormal\">";
-              echo "      " . $osName . "";
-              echo "    </button>";
-              echo "  </a>";
-              echo "</div>";
+              echo "      <div class=\"bangColumn\" style=\"" . ($first ? "" : "margin-left:10px") . "\">";
+              echo "        <a href=\"" . $downloadLink . "\">";
+              echo "          <button type=\"button\" class=\"bangButtonNormal\">";
+              echo "            " . $osName . "";
+              echo "          </button>";
+              echo "        </a>";
+              echo "      </div>";
               $first = false;
-            }
-            
-          } unset($osName);
-        ?>
-      </div>
+            } 
+          }
+          echo "    </td>";
+          echo "  </tr>";
+          echo "</table>";
+        }
+        unset($osName);
+      ?>
     </div>
-    
     
     <div>
       <p align="center" style="margin-top:30px;"> 
@@ -62,6 +85,13 @@
         <a href="<?php echo DownloadFunctions::GetBuildsRootDir()?>"target="_blank"> click here</a>
         .
       </p>
+    </div>
+    
+    <hr/>
+    
+    <div>
+      <h3>Or you can compile it yourself (see 
+        <a href="compilation.php">compile instructions</a>).</h3>
     </div>
     
   </div>

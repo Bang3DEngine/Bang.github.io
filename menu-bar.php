@@ -18,8 +18,8 @@
       <ul class="nav navbar-nav menuBarBase">
         <li id="home-button"><a href="index.php" class="menuBarA">Home</a></li>
         <li id="download-button"><a href="download.php" class="menuBarA">Download</a></li>
-        <li id="repo-button"><a href="https://github.com/Bang3DEngine/Bang" class="menuBarA" target="_blank">Github Repository</a></li>
-        <li id="faq-button"><a href="faq.php" class="menuBarA">FAQ</a></li>
+        <li id="compilation-button"><a href="compilation.php" class="menuBarA">Compile it yourself</a></li>
+        <!--<li id="faq-button"><a href="faq.php" class="menuBarA">FAQ</a></li> -->
         <li id="contact-button"><a href="contact.php" class="menuBarA">Contact</a></li>
       </ul>
     </div>
